@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 function AddCustomerForm({ onAdd }) {
-  const [customerName, setCustomerName] = useState("");
-  const [instagramUsername, setInstagramUsername] = useState("");
-  const [favoriteOutfitColor, setFavoriteOutfitColor] = useState("");
+  const [name, setname] = useState("");
+  const [instagram_username, setinstagram_username] = useState("");
+  const [favorite_outfit_color, setfavorite_outfit_color] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAdd({ customerName, instagramUsername, favoriteOutfitColor });
-    setCustomerName("");
-    setInstagramUsername("");
-    setFavoriteOutfitColor("");
+    onAdd({ name, instagram_username, favorite_outfit_color });
+    setname("");
+    setinstagram_username("");
+    setfavorite_outfit_color("");
   };
 
   return (
@@ -27,22 +27,22 @@ function AddCustomerForm({ onAdd }) {
         <input
           type="text"
           placeholder="Customer Name"
-          value={customerName}
-          onChange={(e) => setCustomerName(e.target.value)}
+          value={name}
+          onChange={(e) => setname(e.target.value)}
           className="input input-bordered w-full py-2 px-4 rounded-lg border-2 border-gray-400 hover:border-gray-500 focus:border-blue-600 focus:ring-2 focus:ring-blue-600 transition duration-200"
         />
         <input
           type="text"
           placeholder="Instagram Username"
-          value={instagramUsername}
-          onChange={(e) => setInstagramUsername(e.target.value)}
+          value={instagram_username}
+          onChange={(e) => setinstagram_username(e.target.value)}
           className="input input-bordered w-full py-2 px-4 rounded-lg border-2 border-gray-400 hover:border-gray-500 focus:border-blue-600 focus:ring-2 focus:ring-blue-600 transition duration-200"
         />
         <input
           type="text"
           placeholder="Favorite Outfit Color"
-          value={favoriteOutfitColor}
-          onChange={(e) => setFavoriteOutfitColor(e.target.value)}
+          value={favorite_outfit_color}
+          onChange={(e) => setfavorite_outfit_color(e.target.value)}
           className="input input-bordered w-full py-2 px-4 rounded-lg border-2 border-gray-400 hover:border-gray-500 focus:border-blue-600 focus:ring-2 focus:ring-blue-600 transition duration-200"
         />
       </div>
